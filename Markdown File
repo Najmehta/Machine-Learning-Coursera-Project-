@@ -1,0 +1,300 @@
+@@ -0,0 +1,299 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="author" content="Najmeh Tavassoli" />
+
+
+<title>MachinLearningCourseraProject</title>
+
+<script src="data:application/x-javascript,%2F%2A%21%20jQuery%20v1%2E11%2E0%20%7C%20%28c%29%202005%2C%202014%20jQuery%20Foundation%2C%20Inc%2E%20%7C%20jquery%2Eorg%2Flicense%20%2A%2F%0A%21function%28a%2Cb%29%7B%22object%22%3D%3Dtypeof%20module%26%26%22object%22%3D%3Dtypeof%20module%2Eexports%3Fmodule%2Eexports%3Da%2Edocument%3Fb%28a%2C%210%29%3Afunction%28a%29%7Bif%28%21a%2Edocument%29throw%20new%20Error%28%22jQuery%20requires%20a%20window%20with%20a%20document%22%29%3Breturn%20b%28a%29%7D%3Ab%28a%29%7D%28%...(line truncated)...
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="data:text/css,%2F%2A%21%0A%20%2A%20Bootstrap%20v2%2E3%2E2%0A%20%2A%0A%20%2A%20Copyright%202013%20Twitter%2C%20Inc%0A%20%2A%20Licensed%20under%20the%20Apache%20License%20v2%2E0%0A%20%2A%20http%3A%2F%2Fwww%2Eapache%2Eorg%2Flicenses%2FLICENSE%2D2%2E0%0A%20%2A%0A%20%2A%20Designed%20and%20built%20with%20all%20the%20love%20in%20the%20world%20by%20%40mdo%20and%20%40fat%2E%0A%20%2A%2F%2Eclearfix%7B%2Azoom%3A1%7D%2Eclearfix%3Abefore%2C%2Eclearfix%3Aafter%7Bdisplay%3Atable%3Bline%2Dheight%3A0%3Bcontent%3A...(line truncated)...
+<link href="data:text/css,%2F%2A%21%0A%20%2A%20Bootstrap%20Responsive%20v2%2E3%2E2%0A%20%2A%0A%20%2A%20Copyright%202013%20Twitter%2C%20Inc%0A%20%2A%20Licensed%20under%20the%20Apache%20License%20v2%2E0%0A%20%2A%20http%3A%2F%2Fwww%2Eapache%2Eorg%2Flicenses%2FLICENSE%2D2%2E0%0A%20%2A%0A%20%2A%20Designed%20and%20built%20with%20all%20the%20love%20in%20the%20world%20by%20%40mdo%20and%20%40fat%2E%0A%20%2A%2F%2Eclearfix%7B%2Azoom%3A1%7D%2Eclearfix%3Abefore%2C%2Eclearfix%3Aafter%7Bdisplay%3Atable%3Bline%2Dheight%3A0...(line truncated)...
+<script src="data:application/x-javascript,%2F%2A%21%0A%2A%20Bootstrap%2Ejs%20by%20%40fat%20%26%20%40mdo%0A%2A%20Copyright%202013%20Twitter%2C%20Inc%2E%0A%2A%20http%3A%2F%2Fwww%2Eapache%2Eorg%2Flicenses%2FLICENSE%2D2%2E0%2Etxt%0A%2A%2F%0A%21function%28e%29%7B%22use%20strict%22%3Be%28function%28%29%7Be%2Esupport%2Etransition%3Dfunction%28%29%7Bvar%20e%3Dfunction%28%29%7Bvar%20e%3Ddocument%2EcreateElement%28%22bootstrap%22%29%2Ct%3D%7BWebkitTransition%3A%22webkitTransitionEnd%22%2CMozTransition%3A%22transitio...(line truncated)...
+
+<style type="text/css">code{white-space: pre;}</style>
+<link href="data:text/css,pre%20%2Eoperator%2C%0Apre%20%2Eparen%20%7B%0A%20color%3A%20rgb%28104%2C%20118%2C%20135%29%0A%7D%0A%0Apre%20%2Eliteral%20%7B%0A%20color%3A%20%23990073%0A%7D%0A%0Apre%20%2Enumber%20%7B%0A%20color%3A%20%23099%3B%0A%7D%0A%0Apre%20%2Ecomment%20%7B%0A%20color%3A%20%23998%3B%0A%20font%2Dstyle%3A%20italic%0A%7D%0A%0Apre%20%2Ekeyword%20%7B%0A%20color%3A%20%23900%3B%0A%20font%2Dweight%3A%20bold%0A%7D%0A%0Apre%20%2Eidentifier%20%7B%0A%20color%3A%20rgb%280%2C%200%2C%200%29%3B%0A%7D%0A%0Apre%2...(line truncated)...
+<script src="data:application/x-javascript,%0Avar%20hljs%3Dnew%20function%28%29%7Bfunction%20m%28p%29%7Breturn%20p%2Ereplace%28%2F%26%2Fgm%2C%22%26amp%3B%22%29%2Ereplace%28%2F%3C%2Fgm%2C%22%26lt%3B%22%29%7Dfunction%20f%28r%2Cq%2Cp%29%7Breturn%20RegExp%28q%2C%22m%22%2B%28r%2EcI%3F%22i%22%3A%22%22%29%2B%28p%3F%22g%22%3A%22%22%29%29%7Dfunction%20b%28r%29%7Bfor%28var%20p%3D0%3Bp%3Cr%2EchildNodes%2Elength%3Bp%2B%2B%29%7Bvar%20q%3Dr%2EchildNodes%5Bp%5D%3Bif%28q%2EnodeName%3D%3D%22CODE%22%29%7Breturn%20q%7Dif%28%2...(line truncated)...
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="container-fluid main-container">
+
+
+<div id="header">
+<h1 class="title">MachinLearningCourseraProject</h1>
+<h4 class="author"><em>Najmeh Tavassoli</em></h4>
+<h4 class="date"><em>Thursday, October 23, 2014</em></h4>
+</div>
+
+
+<pre class="r"><code>pml.training &lt;- read.csv(&quot;D:/download/pml-training.csv&quot;, header=FALSE)
+
+#Data contains of so many missing data, we can cope with the missing data in three ways, 1- remove them. 2- using KNN (K nearest neighbours) 3- Random Forest (it does not helpful for more than half missing data). With quich investigation, we realize that the number of missing is bigger than half of the columns contain missing data so that Random Forest can't predict all missing data accurately. In this project I try **KNN** as classification technique which is helpful for predicting missing data as well. In...(line truncated)...
+<pre class="r"><code>#dim(pml.training)
+pml.training[pml.training==&quot;&quot;]&lt;-NA
+b&lt;-which(colSums(is.na(pml.training))&gt;10000)
+trainData&lt;-pml.training[,-c(b)]
+dim(trainData)</code></pre>
+<pre><code>## [1] 19623    60</code></pre>
+<pre class="r"><code>sum(is.na(trainData))</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>#In preventing overfitting and also evaluating our model, we need to evaluate our classification model by using a new dataset. I evaluted the classifier on 90% of data except 10% by using 10 fold cross validation. So I can see how well the random forest or decision tree classifier work. 
+
+library(caret)</code></pre>
+<pre><code>## Loading required package: lattice
+## Loading required package: ggplot2</code></pre>
+<pre class="r"><code>library(kernlab)
+fold&lt;-createFolds(y=trainData$V160,k=10,list=TRUE,returnTrain=TRUE)</code></pre>
+<pre><code>## Warning in foldVector[which(y == dimnames(numInClass)$y[i])] &lt;-
+## sample(seqVector): number of items to replace is not a multiple of
+## replacement length</code></pre>
+<pre class="r"><code>sapply(fold,length)</code></pre>
+<pre><code>## Fold01 Fold02 Fold03 Fold04 Fold05 Fold06 Fold07 Fold08 Fold09 Fold10 
+##  17662  17660  17661  17662  17661  17659  17660  17660  17660  17662</code></pre>
+<pre class="r"><code>##PCA PREPROCESSING
+mode(trainData)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>traind&lt;-trainData[,c(2,7:60)]
+##CONVERT LIST TO MATRIX
+library(ggplot2)
+traind&lt;-trainData[,c(2,7:60)]
+dataNum &lt;- matrix(data = NA, nrow = dim(traind)[1], ncol = dim(traind)[2])
+for (i in 1:dim(traind)[2]) {
+dataNum[,i] &lt;- c(as.numeric(traind[[i]]))
+    }
+mode (dataNum)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>prComp&lt;-prcomp(dataNum)
+plot(prComp$x[,1],prComp$x[,2],pch=10, col=trainData$V160)</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAAb1BMVEX9/v0AAAAAADkAAGUAAP8AOTkAOWUAOY8AZo8AZrUAzQAA//85AAA5OQA5j9plAABlOQBlOY9ltf2POQCPOWWPZgCP29qP2/21ZgC1/v3ajznatWXa/tra/v39tWX924/9/rX9/tr9/v3/AAD/AP/xz//QAAAAJXRSTlP/////////////////////////////////////////////AP//rFWZLwAAAAlwSFlzAAAdhwAAHYcBj+XxZQAAIABJREFUeJzsvduS7Lpuptt0X3SYctjR9o7u6RXRy14k3/8Zd4k4g6RSqcyqGqrCH2NqZmXqfPgEAiD4P0ooFAqFLul/fPcOhEKh0F0VAA2FQqGLCoCGQqHQRQVAQ6FQ6KICoKFQKHRRAdBQKBS6qABoKBQKXVQANBQKhS4qABoKh...(line truncated)...
+<pre class="r"><code># Preprocessing, &quot;Normalizing Data&quot;&quot;.
+n&lt;-sweep(dataNum, 2, colSums(dataNum), FUN=&quot;/&quot;)
+normData&lt;-scale((dataNum), center=FALSE, scale=colSums(dataNum))
+dim(normData)</code></pre>
+<pre><code>## [1] 19623    55</code></pre>
+<pre class="r"><code>prComp&lt;-prcomp(normData)
+
+#A simple pre-processing method like PCA shows that there is a big overlap between some different classes.
+
+#library(ggplot2)
+#plot(prComp$x[,1],prComp$x[,2],pch=10, col=trainData$V160)</code></pre>
+<pre class="r"><code>#Since this problem is a classification project, linear or non-linear regression model wouldn't be a good solution for that. We need to decide which of the &quot;Decsision tree&quot; or &quot;Random forest&quot; as a classification method works better for this data set.Since the number of predictive is big and it seems a complex problem, I expect that random forest will work better. </code></pre>
+<pre class="r"><code>## Building Decision tree Model using Cross Validation
+library(rpart)
+#i=1
+#for (i in 1:10)
+#{fitModel&lt;-rpart(traind[-c(((i-1)*1962)+1:i*1962),55]~normData[-c((i-1)*1962+1:i*1962),2:54],method=&quot;class&quot;)}
+fitModel&lt;-rpart(traind[,55]~normData[,2:54],method=&quot;class&quot;)
+#plotcp(fitModel)
+#rsq.rpart(fitModel)
+plot(fitModel,uniform=TRUE,main=&quot;Regression Tree&quot;)
+text(fitModel,use.n=TRUE, all=TRUE,cex=0.6)</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAeACAMAAAA4rw2UAAACeVBMVEX9/v0AAAAAAA0AABcAAB0AACAAACgAADEAADkAAEgAAFcAAGUADQAADVEAFwAAFygAF2YAICAAIDkAIHsAIgAAKAAAKBcAKDkAKGYAKIEAKI8AKi0AMVEAMY8ANEgAOSgAOTkAOUgAOWYAOXsAOY8AOZwAOigAOkgAOpwASDMASEgASIEASLUASUgASYEASbUAWGYAWLUAZoEAZpwAZrUKAAALAAANAAANADENUbsQZtoTCAAXAAAXADkXIAAXKDkXZtodgf0gAAAgABcgADkgCgAgIAAge9ooAAAoADkoOQAoOgAogf0oj9oxAAAxAA0xADkxUTExj9o5AAA5ABc5AB05ACA5ACg5ADE5ADk5AGU5KAA5OSg5OTk5Zlc5ZmU5e3s5j5w5j7s5j9o5nNo5nP0+KABIAABISABIS...(line truncated)...
+<pre class="r"><code>prediction &lt;- predict(fitModel, newdata=traind[,2:54], type='class')
+table(prediction, traind[,55])</code></pre>
+<pre><code>##           
+## prediction    A    B    C classe    D    E
+##     A      4770  193  123      0  166  162
+##     B       223 2689  198      0  177  190
+##     C       312  650 2825      0  684  274
+##     classe    0    0    0      0    0    0
+##     D       160  110  221      0 1998  194
+##     E       115  155   55      1  191 2787</code></pre>
+<pre class="r"><code>Accuracy=(4770+2689+2825+1998+2787/14718)</code></pre>
+<pre class="r"><code>  # in this part I used cv-knn (cross validation K nearest neighbors, in actual test I used number of folds as 10 and number of Ks=20 (in this code it tests all values of K, to find the best). Since it is so time consuming with my slow desktop, I provide the code here with smaller No. of folds and Ks)
+library(chemometrics)</code></pre>
+<pre><code>## Loading required package: class
+## Loading required package: e1071
+## Loading required package: gclus
+## Loading required package: cluster
+## Loading required package: lars
+## Loaded lars 1.2
+## 
+## Loading required package: MASS
+## Loading required package: mclust
+## Package 'mclust' version 4.4
+## Type 'citation(&quot;mclust&quot;)' for citing this R package in publications.
+## Loading required package: nnet
+## Loading required package: pcaPP
+## Loading required package: pls
+## 
+## Attaching package: 'pls'
+## 
+## The following object is masked from 'package:caret':
+## 
+##     R2
+## 
+## The following object is masked from 'package:stats':
+## 
+##     loadings
+## 
+## Loading required package: robustbase
+## Loading required package: som</code></pre>
+<pre class="r"><code>library(class)
+x.train&lt;-dataNum[,c(2:54)]
+y.train&lt;-dataNum[,c(55)]
+KNNFit&lt;-knn.cv(x.train, y.train, k = 3, l = 0)
+summary(KNNFit)</code></pre>
+<pre><code>##    1    2    3    4    5    6 
+## 5390 3714 3672    0 3317 3530</code></pre>
+<pre class="r"><code>table(KNNFit,y.train)</code></pre>
+<pre><code>##       y.train
+## KNNFit    1    2    3    4    5    6
+##      1 4859  264   95    0   95   77
+##      2  280 3015  167    0  100  152
+##      3  172  261 2879    0  202  158
+##      4    0    0    0    0    0    0
+##      5  151  124  186    1 2685  170
+##      6  118  133   95    0  134 3050</code></pre>
+<pre class="r"><code>CV.AccuracyOverall&lt;-(4866+3017+2874+2687+3034)/16918
+print(CV.AccuracyOverall)</code></pre>
+<pre><code>## [1] 0.9739922</code></pre>
+<pre class="r"><code>CV.AccuracyA&lt;-(4866)/(4866+276+180+140+118)
+print(CV.AccuracyA)</code></pre>
+<pre><code>## [1] 0.872043</code></pre>
+<pre class="r"><code>CV.AccuracyB&lt;-(3017)/(262+270+3017+119+129)
+print(CV.AccuracyB)</code></pre>
+<pre><code>## [1] 0.7945747</code></pre>
+<pre class="r"><code>CV.AccuracyC&lt;-(2874)/(92+164+2874+202+90)
+print(CV.AccuracyC)</code></pre>
+<pre><code>## [1] 0.8398597</code></pre>
+<pre class="r"><code>CV.AccuracyD&lt;-(2687)/(86+104+198+2687+141)
+print(CV.AccuracyD)</code></pre>
+<pre><code>## [1] 0.83551</code></pre>
+<pre class="r"><code>CV.AccuracyE&lt;-(3034)/(78+157+162+176+3034)
+print(CV.AccuracyE)</code></pre>
+<pre><code>## [1] 0.8411422</code></pre>
+<pre class="r"><code>#*.Tuning Random Forest, mtry and size of tree *</code></pre>
+<pre class="r"><code>library(randomForest)
+tuneRF(x=normData[,2:54], y=traind[,55],plot=TRUE)</code></pre>
+<pre><code>## mtry = 7  OOB error = 0.41% 
+## Searching left ...
+## mtry = 4     OOB error = 0.66% 
+## -0.6125 0.05 
+## Searching right ...
+## mtry = 14    OOB error = 0.3% 
+## 0.275 0.05 
+## mtry = 28    OOB error = 0.37% 
+## -0.2413793 0.05</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwAAAAPACAMAAAC1t+4IAAAAZlBMVEX9/v0AAAAAADkAAGUAOY8AZo8AZrU5AAA5ZmU5ZrU5j9plAABlZgBltbVltf17ezmPOQCPZgCPjzmP29qP2/21ZgC1jzm1/rW1/v3ajzna/rXa/tra/v39tWX924/9/rX9/tr9/v1JxXj+AAAAInRSTlP///////////////////////////////////////////8ADdDDcQAAAAlwSFlzAAAdhwAAHYcBj+XxZQAAH+RJREFUeJzt3X1j2sh6hvHDbpq0SZumPUvPoV0n6+//JYtAGAlkw0jz8txzX78/NlnbiImYCySQ5L+9Asb+1noAQEsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEA...(line truncated)...
+<pre><code>##        mtry    OOBError
+## 4.OOB     4 0.006573918
+## 7.OOB     7 0.004076849
+## 14.OOB   14 0.002955715
+## 28.OOB   28 0.003669164</code></pre>
+<pre class="r"><code>fit&lt;-randomForest(y=traind[,55],x=normData[,2:54])
+treesize(fit, terminal=FALSE)</code></pre>
+<pre><code>##   [1] 2237 2371 2223 2311 2243 1609 1911 2125 2011 2349 2149 2227 2381 1915
+##  [15] 2383 2603 1787 1913 2233 1977 1923 1775 1657 1907 2475 1793 2489 1717
+##  [29] 2089 2453 1731 2617 2117 2335 2031 2257 2217 2493 2163 2423 2053 2223
+##  [43] 2133 2235 1983 2547 2385 1817 2091 2261 2109 1909 2273 2383 2415 2171
+##  [57] 2053 2209 2571 2471 2315 2149 2565 1521 1795 1545 2125 1585 2331 2389
+##  [71] 2159 2125 2341 1771 1761 2251 2091 1765 2321 1935 1989 1807 2129 2151
+##  [85] 2053 1985 2293 2181 2067 2127 2179 2091 1507 1863 1761 2729 1913 1829
+##  [99] 1869 2129 2367 1995 1649 2033 1927 2111 1847 1731 2139 1655 1727 1619
+## [113] 2279 1617 2029 2179 1929 2395 1995 2211 2271 1823 2003 2345 2153 1865
+## [127] 2251 1947 2461 2273 2273 2277 2295 2289 2199 2333 1983 2017 1753 1587
+## [141] 1849 2099 2173 2011 1911 2353 2141 2237 2005 2265 2419 1435 2345 1561
+## [155] 2489 1939 2209 1885 2069 1893 2275 1681 2327 1977 2317 2057 2323 1937
+## [169] 2083 2383 2239 2237 2257 2651 2391 2191 1673 2709 1591 2161 2277 1495
+## [183] 1731 2511 2515 2395 2049 2321 2281 2267 2081 2001 1965 2277 1987 1585
+## [197] 1773 2357 2363 2377 2301 2117 2115 2439 1923 1819 2361 1961 1697 1723
+## [211] 1787 2159 1843 2255 2073 2155 1829 2043 2223 2109 2425 2349 2037 1439
+## [225] 1709 2425 2453 2237 2167 2289 2327 1919 2533 2205 1783 2285 2269 2403
+## [239] 2005 2455 2229 2013 2189 2523 1937 2615 1833 2409 2195 2027 1695 1839
+## [253] 1785 2045 2343 1787 2053 1759 1655 2617 1701 2157 1981 1993 2211 1943
+## [267] 2193 1977 1643 1991 1939 2181 2407 2227 1703 1617 1643 1945 2433 2257
+## [281] 2035 2357 2215 2273 2313 2209 2113 2433 2427 2557 1913 2537 1787 2459
+## [295] 1913 1797 1581 1997 1971 2297 1931 2173 2467 2495 1759 2211 2023 2351
+## [309] 1959 1743 1919 2259 1695 1783 1807 2191 2303 1871 2059 2057 2297 1821
+## [323] 2151 2011 1991 2261 1929 2459 1655 1939 2427 2581 2409 1573 2517 2555
+## [337] 2415 2505 2403 2305 2333 1807 2241 2367 2029 2033 2405 1963 2009 2109
+## [351] 1993 1983 2269 1695 1833 2383 2009 2235 2175 1993 2091 1955 1677 2245
+## [365] 1835 1907 2565 2017 1991 2011 2381 1851 2497 1551 1895 2227 1859 1523
+## [379] 1889 2239 1443 1803 1885 1941 1977 2053 2477 2071 2107 1719 1907 2039
+## [393] 1451 1639 1783 2089 2185 1601 1697 2337 1977 1703 2123 1789 2637 1751
+## [407] 2337 1879 2111 2267 2451 2393 2023 2141 1751 2269 2083 2375 1811 2017
+## [421] 2493 2809 2483 2127 1871 2233 1751 2329 2187 2093 1745 1821 2311 2175
+## [435] 1935 2505 1863 1707 1627 2347 1833 1627 1941 1691 2139 1957 2593 1743
+## [449] 2269 1579 2283 2131 2181 2523 2755 1675 2507 1831 2235 2185 2347 2353
+## [463] 1699 2157 2433 2139 1687 2049 1875 2011 1901 2525 2365 1977 2089 2597
+## [477] 2673 1629 1911 2059 2155 1971 1883 2473 2663 2743 2293 1825 1719 2305
+## [491] 2339 2471 2299 1653 2445 1745 2415 1809 2559 2279</code></pre>
+<pre class="r"><code>hist(treesize(fit))</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwAAAAPACAMAAAC1t+4IAAAAb1BMVEX9/v0AAAAAADkAAGUAOTkAOY8AZo8AZrU5AAA5OQA5OTk5j9plAABlOY9lZgBltf2POQCPZgCPjzmPj9qPtY+P29qP2/21ZgC1jzm1/rW1/v3ajznatWXa24/a/tra/v39tWX924/9/rX9/tr9/v0iRp3AAAAAJXRSTlP///////////////////////////////////////////////8AP89CTwAAAAlwSFlzAAAdhwAAHYcBj+XxZQAAIABJREFUeJztnW1jm0xwaOukqX3rtE7vvQ1t1DZyov//G8ubYIGVxIhZ2Nk558PzxHjEjmEP7BvoHy4AjvmHoxMAOBIEANcgALgGAcA1CACuQQBwDQKAaxAAXIMA4BoEANcgALgGAcA1CACuQQBwDQKAaxAAXIMA4BoEANcgALgGA...(line truncated)...
+<pre class="r"><code>#*Classification and Regression with Random Forest*, I didn't run the random forest here due to its time consuming. I provide the code with out the results here. By the way, my investigation leads to the conclusion that KNN works perfectly for this project so thats the classification method I used for my test data set. However I use Ks=20 and test ks=1 to 20 and report the best one.
+#library(randomForest)
+#library(caret)
+#library(kernlab)
+#traindd&lt;-traind[-c(1),]
+#traindd&lt;-traindd[,-c(1:2)]
+#inTrain&lt;-createDataPartition(y=traindd[,53],p=0.75, list=FALSE)
+#training&lt;-traindd[inTrain,]
+#testing&lt;-traindd[-inTrain,]
+#Folds&lt;-createMultiFolds(y=traindd$V160, k=10,times=10)
+#rfFit&lt;-train(traindd$V160~.,data=traindd, ntree=10, mtry=2, method=&quot;rf&quot;, importance=TRUE)
+#rfFit
+#rfPred &lt;- predict.train(rfFit, data=traindd, type = &quot;raw&quot;)
+#confusionMatrix(rfPred, traindd$V160) 
+#fitForest&lt;-train(training$V160~., data=training, method=&quot;rf&quot;, ntree=1000,mtry=14,replace=TRUE,importance=TRUE,proximity=TRUE)
+#print(fitForest)
+#round(importance,2)
+#prediction&lt;-predict(fitForest, testing[,1:52])
+#table(prediction, testing[,53])</code></pre>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
